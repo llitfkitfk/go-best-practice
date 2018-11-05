@@ -1811,8 +1811,10 @@ func main() {
 自己编写这种逻辑是重复而微妙的。 参考下这个包: [https://github.com/heptio/workgroup](https://github.com/heptio/workgroup)，它会为你完成大部分工作。
 
 
-> **引用: **
+--- 
 
+> **引用: **
+>
 > [1](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_1). [https://gaston.life/books/effective-programming/](https://gaston.life/books/effective-programming/)
 >
 > [2](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_2). [https://talks.golang.org/2014/names.slide#4](https://talks.golang.org/2014/names.slide#4)
@@ -1842,10 +1844,11 @@ func main() {
 > [11](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_11). [http://www.gopl.io/](http://www.gopl.io/)
 
 
+--- 
 
 **原文链接：**[Practical Go: Real world advice for writing maintainable Go programs](https://dave.cheney.net/practical-go/presentations/qcon-china.html)
 
---- 
+
 - *如有翻译有误或者不理解的地方，请评论指正*
 - *待更新的译注之后会做进一步修改翻译*
 - *翻译：[田浩](https://github.com/llitfkitfk)*
