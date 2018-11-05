@@ -1,47 +1,47 @@
 # 目录
 
-### 1. 指导原则
-#### 1.1 简单性
-#### 1.2 可读性
-#### 1.3 生产力
+- [1. 指导原则](#1-指导原则)
+	- [1.1 简单性](#11-简单性)
+	- [1.2 可读性](#12-可读性)
+	- [1.3 生产力](#13-生产力)
 
-### 2. 标识符
-#### 2.1 选择标识是为了清晰, 而不是简洁
-#### 2.2 标识符长度
-#### 2.3 不要用变量类型命名变量
-#### 2.3 使用一致的命名风格
-#### 2.3 使用一致的声明样式
-#### 2.3 成为团队的合作者
+- [2. 标识符](#2-标识符)
+	- [2.1 选择标识是为了清晰, 而不是简洁](#21-选择标识符是为了清晰而不是简洁)
+	- [2.2 标识符长度](#22-标识符长度)
+	- [2.3 不要用变量类型命名变量](#23-不要用变量类型命名你的变量)
+	- [2.4 使用一致的命名风格](#24-使用一致的命名方式)
+	- [2.5 使用一致的声明样式](#25-使用一致的声明样式)
+	- [2.6 成为团队的合作者](#26-成为团队合作者)
 
-### 3. 注释
-#### 3.1 关于变量和常量的注释应描述其内容而非其目的
-#### 3.2 公共符号始终要注释
+- [3. 注释](#3-注释)
+	- [3.1 关于变量和常量的注释应描述其内容而非其目的](#31-关于变量和常量的注释应描述其内容而非其目的)
+	- [3.2 公共符号始终要注释](#32-公共符号始终要注释)
 
 
-### 4. 包的设计
-#### 4.1 一个好的包从它的名字开始
-#### 4.2 避免使用类似`base`、`common`或`util`的包名称
-#### 4.3 尽早`reture`而不是深度嵌套
-#### 4.4 让零值更有用
-#### 4.5 避免包级别状态
+- [4. 包的设计](#4-包的设计)
+	- [4.1 一个好的包从它的名字开始](#41-一个好的包从它的名字开始)
+	- [4.2 避免使用类似`base`、`common`或`util`的包名称](#42-避免使用类似basecommon或util的包名称)
+	- [4.3 尽早`reture`而不是深度嵌套](#43-尽早reture而不是深度嵌套)
+	- [4.4 让零值更有用](#44-让零值更有用)
+	- [4.5 避免包级别状态](#45-避免包级别状态)
  
-### 5. 项目结构
-#### 5.1 考虑更少，更大的包
-#### 5.2 保持`main`包内容尽可能的少
+- [5. 项目结构](#5-项目结构)
+	- [5.1 考虑更少，更大的包](#51-考虑更少更大的包)
+	- [5.2 保持`main`包内容尽可能的少](#52-确保main包内容尽可能的少)
 
-### 6. API设计
-#### 6.1 设计难以被误用的API
-#### 6.2 为其默认用例设计API
-#### 6.3 让函数定义它们所需的行为
+- [6. API设计](6-api设计)
+	- [6.1 设计难以被误用的API](#61-设计难以被误用的api)
+	- [6.2 为其默认用例设计API](#62-为其默认用例设计api)
+	- [6.3 让函数定义它们所需的行为](#63-让函数定义它们所需的行为)
 
-### 7. 错误处理
-#### 7.1. 通过消除错误来消除错误处理
-#### 7.2. 错误只处理一次
+- [7. 错误处理](#7-错误处理)
+	- [7.1 通过消除错误来消除错误处理](#71-通过消除错误来消除错误处理)
+	- [7.2 错误只处理一次](#72-错误只处理一次)
 
-### 8. 并发
-#### 8.1. 保持自己忙碌或做自己的工作
-#### 8.2. 将并发性留给调用者
-#### 8.3. 永远不要启动一个停止不了的`goroutine`
+- [8. 并发](#8-并发)
+	- [8.1 保持自己忙碌或做自己的工作](#81-保持自己忙碌或做自己的工作)
+	- [8.2 将并发性留给调用者](#82-将并发性留给调用者)
+	- [8.3 永远不要启动一个停止不了的`goroutine`](#83-永远不要启动一个停止不了的goroutine)
 
 
 # 介绍
@@ -121,7 +121,7 @@ Go程序员不会花费整天的时间来调试不可思议的编译错误。他
 当他们说语言必须扩展时，Go团队会谈论生产力。
 
 
-### 2.标识符
+### 2. 标识符
 
 我们要讨论的第一个主题是标识符。 标识符是一个用来表示名称的花哨单词; 变量的名称，函数的名称，方法的名称，类型的名称，包的名称等。
 
@@ -444,7 +444,7 @@ length := uint32(0x80)
 > 贴士:
 如果要在代码库中进行重命名，请不要将其混合到另一个更改中。 如果有人使用`git bisect`，他们不想通过数千行重命名来查找您更改的代码。
 
-### 3.注释
+### 3. 注释
 
 在我们继续讨论更大的项目之前，我想花几分钟时间谈论一下注释。
 
@@ -602,7 +602,7 @@ func (l *LimitedReader) Read(p []byte) (n int, err error) {
 
 除了更容易理解之外，较小的函数更易于隔离测试，将代码隔离到函数中，其名称可能是所需的所有文档。
 
-### 4.包的设计
+### 4. 包的设计
 > Write shy code - modules that don’t reveal anything unnecessary to other modules and that don’t rely on other modules' implementations.
 编写谨慎的代码 - 不向其他模块透露任何不必要的模块，并且不依赖于其他模块的实现。
  — Dave Thomas
@@ -790,7 +790,7 @@ func main() {
 1. 将相关变量作为字段移动到需要它们的结构上。
 2. 使用接口来减少行为与实现之间的耦合。
 
-### 5.项目结构
+### 5. 项目结构
 
 我们来谈谈如何将包组合到项目中。 通常一个项目是一个`git`仓库，但在未来Go语言开发人员会交替地使用`module`和`project`。
 
@@ -1125,7 +1125,7 @@ func Save(w io.Writer, doc *Document) error
 
 [[译注: 不理解设计原则部分的同学可以阅读Dave大神的另一篇<Go语言SOLID设计>]](https://www.jianshu.com/p/0aebd9618300)
 
-### 7.错误处理
+### 7. 错误处理
 
 我已经给出了几个关于错误处理的演示文稿[[8]](https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully)，并在我的博客上写了很多关于错误处理的文章。我在昨天的会议上也讲了很多关于错误处理的内容，所以在这里不再赘述。
 * [https://dave.cheney.net/2014/12/24/inspecting-errors](https://dave.cheney.net/2014/12/24/inspecting-errors)
@@ -1799,31 +1799,32 @@ func main() {
 自己编写这种逻辑是重复而微妙的。 参考下这个包: [https://github.com/heptio/workgroup](https://github.com/heptio/workgroup)，它会为你完成大部分工作。
 
 
-**引用: **
-[1](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_1). [https://gaston.life/books/effective-programming/](https://gaston.life/books/effective-programming/)
+> **引用: **
 
-[2](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_2). [https://talks.golang.org/2014/names.slide#4](https://talks.golang.org/2014/names.slide#4)
-
-[3](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_3). [https://www.infoq.com/articles/API-Design-Joshua-Bloch](https://www.infoq.com/articles/API-Design-Joshua-Bloch)
-
-[1](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_1). [https://www.lysator.liu.se/c/pikestyle.html](https://www.lysator.liu.se/c/pikestyle.html)
-
-[2](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_2). [https://speakerdeck.com/campoy/understanding-nil](https://speakerdeck.com/campoy/understanding-nil)
-
-[3](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_3). [https://www.youtube.com/watch?v=Ic2y6w8lMPA](https://www.youtube.com/watch?v=Ic2y6w8lMPA)
-
-[4](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_4). [https://medium.com/@matryer/line-of-sight-in-code-186dd7cdea88](https://medium.com/@matryer/line-of-sight-in-code-186dd7cdea88)
-
-[5](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_5). [https://golang.org/doc/go1.4#internalpackages](https://golang.org/doc/go1.4#internalpackages)
-
-[6](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_6). [https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis](https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis)
-
-[7](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_7). [https://commandcenter.blogspot.com/2014/01/self-referential-functions-and-design.html](https://commandcenter.blogspot.com/2014/01/self-referential-functions-and-design.html)
-
-[8](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_8). [https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully](https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully)
-
-[9](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_9). [https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201](https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201)
-
-[10](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_10). [https://blog.golang.org/errors-are-values](https://blog.golang.org/errors-are-values)
-
-[11](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_11). [http://www.gopl.io/](http://www.gopl.io/)
+> [1](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_1). [https://gaston.life/books/effective-programming/](https://gaston.life/books/effective-programming/)
+>
+> [2](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_2). [https://talks.golang.org/2014/names.slide#4](https://talks.golang.org/2014/names.slide#4)
+>
+> [3](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_3). [https://www.infoq.com/articles/API-Design-Joshua-Bloch](https://www.infoq.com/articles/API-Design-Joshua-Bloch)
+> 
+> [1](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_1). [https://www.lysator.liu.se/c/pikestyle.html](https://www.lysator.liu.se/c/pikestyle.html)
+>
+> [2](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_2). [https://speakerdeck.com/campoy/understanding-nil](https://speakerdeck.com/campoy/understanding-nil)
+> 
+> [3](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_3). [https://www.youtube.com/watch?v=Ic2y6w8lMPA](https://www.youtube.com/watch?v=Ic2y6w8lMPA)
+> 
+> [4](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_4). [https://medium.com/@matryer/line-of-sight-in-code-186dd7cdea88](https://medium.com/@matryer/line-of-sight-in-code-186dd7cdea88)
+> 
+> [5](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_5). [https://golang.org/doc/go1.4#internalpackages](https://golang.org/doc/go1.4#internalpackages)
+> 
+> [6](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_6). [https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis](https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis)
+> 
+> [7](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_7). [https://commandcenter.blogspot.com/2014/01/self-referential-functions-and-design.html](https://commandcenter.blogspot.com/2014/01/self-referential-functions-and-design.html)
+> 
+> [8](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_8). [https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully](https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully)
+> 
+> [9](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_9). [https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201](https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201)
+> 
+> [10](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_10). [https://blog.golang.org/errors-are-values](https://blog.golang.org/errors-are-values)
+> 
+> [11](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_11). [http://www.gopl.io/](http://www.gopl.io/)
