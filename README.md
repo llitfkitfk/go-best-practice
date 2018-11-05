@@ -1840,3 +1840,13 @@ func main() {
 > [10](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_10). [https://blog.golang.org/errors-are-values](https://blog.golang.org/errors-are-values)
 > 
 > [11](https://dave.cheney.net/practical-go/presentations/qcon-china.html#_footnoteref_11). [http://www.gopl.io/](http://www.gopl.io/)
+
+
+
+**原文链接：**[Practical Go: Real world advice for writing maintainable Go programs](https://dave.cheney.net/practical-go/presentations/qcon-china.html)
+
+--- 
+- *如有翻译有误或者不理解的地方，请评论指正*
+- *待更新的译注之后会做进一步修改翻译*
+- *翻译：[田浩](https://github.com/llitfkitfk)*
+- *邮箱：<llitfkitfk@gmail.com>*
