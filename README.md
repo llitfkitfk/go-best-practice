@@ -55,6 +55,16 @@
 > 贴士: 在这里有最新的文章链接
 [https://dave.cheney.net/practical-go/presentations/qcon-china.html](https://dave.cheney.net/practical-go/presentations/qcon-china.html)
 
+## 编者的话
+
+- 终于翻译完了Dave大神的这一篇《**Go语言最佳实践**》
+- 耗时两周的空闲时间
+- 翻译的同时也对Go语言的开发与实践有了更深层次的了解
+- 有兴趣的同学可以翻阅Dave的另一篇博文[《**SOLID Go语言设计**》](https://www.jianshu.com/p/0aebd9618300)(第六章节也会提到)
+- 同时在这里也推荐一个Telegram Docker群组(分享/交流): [https://t.me/dockertutorial](https://t.me/dockertutorial)
+
+## 正文
+
 ### 1. 指导原则
 
 如果我要谈论任何编程语言的最佳实践，我需要一些方法来定义“什么是最佳”。 如果你昨天来到我的主题演讲，你会看到Go团队负责人Russ Cox的这句话：
