@@ -23,7 +23,7 @@
 - [4. 包的设计](#4-包的设计)
 	- [4.1 一个好的包从它的名字开始](#41-一个好的包从它的名字开始)
 	- [4.2 避免使用类似`base`、`common`或`util`的包名称](#42-避免使用类似basecommon或util的包名称)
-	- [4.3 尽早`reture`而不是深度嵌套](#43-尽早reture而不是深度嵌套)
+	- [4.3 尽早`return`而不是深度嵌套](#43-尽早return而不是深度嵌套)
 	- [4.4 让零值更有用](#44-让零值更有用)
 	- [4.5 避免包级别状态](#45-避免包级别状态)
  
@@ -668,7 +668,7 @@ func (l *LimitedReader) Read(p []byte) (n int, err error) {
 > * 当导入到其他包中时，`strings`包中的`Reader`类型变为`strings.Reader`。
 > * `net`包中的`Error`接口显然与网络错误有关。
 
-#### 4.3. 尽早`reture`而不是深度嵌套
+#### 4.3. 尽早`return`而不是深度嵌套
 
 由于Go语言的控制流不使用`exception`，因此不需要为`try`和`catch`块提供顶级结构而深度缩进代码。 Go语言代码不是成功的路径越来越深地嵌套到右边，而是以一种风格编写，其中随着函数的进行，成功路径继续沿着屏幕向下移动。 我的朋友Mat Ryer将这种做法称为“视线”编码。[[4]](https://medium.com/@matryer/line-of-sight-in-code-186dd7cdea88)
 
