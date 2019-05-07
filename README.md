@@ -1606,7 +1606,7 @@ func main() {
 // ListDirectory returns the contents of dir.
 func ListDirectory(dir string) ([]string, error)
 ```
-```
+```golang
 // ListDirectory returns a channel over which
 // directory entries will be published. When the list
 // of entries is exhausted, the channel will be closed.
