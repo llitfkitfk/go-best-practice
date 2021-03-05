@@ -492,7 +492,7 @@ return &v2.Cluster_CommonLbConfig{
         },
 }
 ```
-在此示例中，无法清楚地明白 `HealthyPanicThreshold` 设置为零百分比的效果。 需要注释 `0` 值将禁用 `panic` 阀值。
+在此示例中，无法清楚地明白 `HealthyPanicThreshold` 设置为零百分比的效果。 需要注释 `0` 值将禁用 `panic` 阈值。
 
 #### 3.1. 关于变量和常量的注释应描述其内容而非其目的
 
