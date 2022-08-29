@@ -1854,6 +1854,6 @@ func main() {
 - *翻译：[田浩](https://github.com/llitfkitfk)*
 - *邮箱：<llitfkitfk@gmail.com>*
 
-BUY ME COFFEE
+**BUY ME COFFEE:**
 ![image](https://user-images.githubusercontent.com/2404785/187177781-231a6cf1-88fd-4524-97a9-9c3b111a4a4d.png)
 
